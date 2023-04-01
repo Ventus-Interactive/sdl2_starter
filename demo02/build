@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+
+
+out_obj = 'app'
+
+sdl2_deps = '-lSDL2main -lSDL2 -lSDL2_image'
+lib_deps = '-lm'
+
+cc = 'gcc'
+cmd = f'{cc} main.c -w {sdl2_deps} {lib_deps} -o {out_obj}'
+
+from subprocess import run
+run(cmd, shell=True)
